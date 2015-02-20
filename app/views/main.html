@@ -12,12 +12,13 @@
     <div class="warning" ng-show="addError">{{addError}}</div>
 
     <div ui-sortable ng-model="todos">
-      <p class="input-group" ng-repeat="item in todos" style="padding: 5px 10px; cursor:">
+      <div class="input-group" ng-repeat="item in todos" style="padding: 5px 10px; cursor:move">
+        <span class="glyphicon glyphicon-move input-group-addon" style="top: 0;"></span>
         <input type="text" ng-model="item" class="form-control">
         <span class="input-group-btn">
           <button class="btn btn-danger" ng-click="removeTodo($index)" aria-label="Remove">X</button>
         </span>
-      </p>
+      </div>
     </div>
     
   </form>
